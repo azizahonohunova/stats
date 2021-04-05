@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master,v1,v2 ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, v1,v2  ]
 
 jobs:
 
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
         with:
-          go-version: 1.15
+          go-version: 1.16
         id: go
 
       - name: Set up GOPRIVATE
